@@ -12,11 +12,7 @@
     <body>
         <!--///////////////Tabs////////////////////-->
         <div class="container-fluid">
-            <!--<nav class="nav nav-pills nav-justified">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
-                <a class="nav-link" href="#">Much longer nav link</a>
-                <a class="nav-link" href="#">Link</a>
-              </nav>-->
+            
 
             <ul class="nav nav-tabs">
                 <li class="nav-item">
@@ -32,45 +28,70 @@
             </ul>
 
             <!--////////////////MULTIPLES/////////////////-->
-            <div class="multiples">
+            <div class="content" >
                 <h1>
                     Multiples of 3 or 5
                 </h1>
                 <p>
                     Enter a number and a sum of the multiples of 3 or 5  that are below the entered number will be calculated and displayed below:
                 </p>
+                <div class="form-group">
+                    
+                    <input type="number" class="form-control" id="num-input" placeholder="Enter your number" style="width: 50%;">
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate</button>
             </div>
 
             <!--////////////////FIBONACCI NUMBERS/////////////////-->
-            <div class="fibonacci">
+            <div class="content" >
                 <h1>
                     Even Fibonacci Numbers
                 </h1>
                 <p>
                     Enter a number and the sum of the even-valued terms in the Fibonacci sequence whose values do not exceed the entered number will be calculated and displayed below:
                 </p>
+                <div class="form-group">
+                    
+                    <input type="number" class="form-control" id="num-input" placeholder="Enter your number" style="width: 50%;">
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate</button>
             </div>
 
             <!--////////////////LARGEST PRIME FACTOR/////////////////-->
-            <div class="prime-factor">
+            <div class="content" >
                 <h1>
                     Largest Prime Factor
                 </h1>
                 <p>
                     Enter a number and the largest prime factor of the entered number will be calculated and displayed below:
                 </p>
+                <div class="form-group">
+                    
+                    <input type="number" class="form-control" id="num-input" placeholder="Enter your number" style="width: 50%;">
+                </div>
+                <button type="submit" class="btn btn-primary" style=>Calculate</button>
             </div>
         </div>
 
-        
-
-        
-
-        <!---->
-
-
-        <!---->
-        
+ 
     </body>
+
+    <!--//////////////JAVASCRIPT//////////////////-->
+    <script>
+        const tabs=document.querySelectorAll('.nav-link');
+        const all_content=document.querySelectorAll('.content');
+
+        tabs.forEach((tab, index)=>{
+            tab.addEventListener('click', (e)=>{
+                
+
+                all_content.forEach(content=>{content.classList.remove('active')});
+                all_content[index].classList.add('active');
+            })
+        })
+
+ 
+
+    </script>
 
 </html>
