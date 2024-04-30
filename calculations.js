@@ -1,5 +1,6 @@
+//////////////////TAB SELECTION///////////////////////
 const tabs=document.querySelectorAll('.nav-link');
-        const all_content=document.querySelectorAll('.content');
+const all_content=document.querySelectorAll('.content');
 
         tabs.forEach((tab, index)=>{
             tab.addEventListener('click', (e)=>{
@@ -14,13 +15,20 @@ const tabs=document.querySelectorAll('.nav-link');
         function calcM() {
             var num = parseInt(document.getElementById('num-input1').value);
             var sum = 0;
-
-            for (let i = 0; i < num; i++) {
-                if ((i % 3) === 0 || (i % 5) === 0) {
-                    sum += i;
+            if(num>0)
+            {
+                for (let i = 0; i < num; i++) {
+                    if ((i % 3) === 0 || (i % 5) === 0) {
+                        sum += i;
+                    }
                 }
+
+                document.getElementById('answer').textContent = sum.toString();
+            }else{
+                document.getElementById('answer').textContent = "INVALID! PLEASE ENTER A NUMBER INTO THE INPUT BOX";
             }
-        document.getElementById('answer').textContent = sum.toString();
+            
+        
         }
 
         //////////////////CALCULATE SUM OF EVEN FIBONACCI VALUES////////////////////
@@ -33,25 +41,32 @@ const tabs=document.querySelectorAll('.nav-link');
             var fib =[];
             var fibIndex = 0;
 
-            while (seq < num) {
-                seq = num1 + num2;
-                fib[fibIndex] = seq;
-                num2 = num1;
-                num1 = seq;
+            if(num>0)
+            {
+                while (seq < num) {
+                    seq = num1 + num2;
+                    fib[fibIndex] = seq;
+                    num2 = num1;
+                    num1 = seq;
+                    
+                    
+                    fibIndex++;
+                }
+    
+                for(let i=0;i<fibIndex; i++)
+                {
+                    if(fib[i]%2===0)
+                    {
+                        sum+=fib[i];
+                    }
+                }
                 
-                
-                fibIndex++;
+                document.getElementById('answer2').textContent = sum.toString();
+            }else{
+                document.getElementById('answer2').textContent = "INVALID! PLEASE ENTER A NUMBER INTO THE INPUT BOX";
             }
 
-            for(let i=0;i<fibIndex; i++)
-            {
-                if(fib[i]%2===0)
-                {
-                    sum+=fib[i];
-                }
-            }
             
-            document.getElementById('answer2').textContent = sum.toString();
         }
 
         /////////////////CALCULATE LARGEST PRIME FACTOR////////////////////
@@ -60,14 +75,21 @@ const tabs=document.querySelectorAll('.nav-link');
             var factor = 2;
             var primeFactor = 0;
 
-            while (factor <= num) {
-                if (num % factor === 0) {
-                    num = num / factor;
-                    primeFactor = factor;
-                } else {
-                    factor++;
+            if(num>0)
+            {
+                while (factor <= num) {
+                    if (num % factor === 0) {
+                        num = num / factor;
+                        primeFactor = factor;
+                    } else {
+                        factor++;
+                    }
                 }
+    
+                document.getElementById('answer3').textContent = primeFactor.toString();
+            }else{
+                document.getElementById('answer3').textContent = "INVALID! PLEASE ENTER A NUMBER INTO THE INPUT BOX";
             }
 
-            document.getElementById('answer3').textContent = primeFactor.toString();
-        }
+            
+        } 

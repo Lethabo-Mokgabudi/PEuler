@@ -36,15 +36,14 @@
                     Enter a number and a sum of the multiples of 3 or 5  that are below the entered number will be calculated and displayed below:
                 </p>
                 <div class="form-group">
-                    
-                    <input type="number" class="form-control" id="num-input1" placeholder="Enter your number" style="width: 50%;">
+                    <input type="number" class="form-control" id="num-input1" placeholder="Enter your number" style="width: 50%;" min="1" max="1000" required >
                 </div>
                 <button type="submit" class="btn btn-primary" id="calc-mult" onclick="calcM()">Calculate</button>
                 <div>
                     <label for="answer">
                         Answer: 
                     </label>
-                    <p id="answer">0000000</p>
+                    <p id="answer"></p>
                 </div>
             </div>
 
@@ -58,14 +57,14 @@
                 </p>
                 <div class="form-group">
                     
-                    <input type="number" class="form-control" id="num-input2" placeholder="Enter your number" style="width: 50%;">
+                    <input type="number" class="form-control" id="num-input2" placeholder="Enter your number" style="width: 50%;" min="1" max="4000000" required>
                 </div>
                 <button type="submit" class="btn btn-primary" id="calc-fib" onclick="calcF()">Calculate</button>
                 <div>
-                    <label for="answer">
+                    <label for="answer2">
                         Answer: 
                     </label>
-                    <p id="answer2">0000000</p>
+                    <p id="answer2"></p>
                 </div>
             </div>
 
@@ -79,14 +78,14 @@
                 </p>
                 <div class="form-group">
                     
-                    <input type="number" class="form-control" id="num-input3" placeholder="Enter your number" style="width: 50%;">
+                    <input type="number" class="form-control" id="num-input3" placeholder="Enter your number" style="width: 50%;" min="1" max="600851475143" required>
                 </div>
                 <button type="submit" class="btn btn-primary" id="calc-PF" onclick="calcPF()">Calculate</button>
                 <div>
-                    <label for="answer">
+                    <label for="answer3">
                         Answer: 
                     </label>
-                    <p id="answer3">0000000</p>
+                    <p id="answer3"></p>
                 </div>
             </div>
         </div>
